@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Node
-    - uses: actions/setup-node@v2 
+      uses: actions/setup-node@v2 
       with:
         node-version: 14
         cache: yarn
+
     - name: Checkout
       uses: actions/checkout@v2
-      
+
     - name: Build & Export
       run: yarn install && yarn build
 
